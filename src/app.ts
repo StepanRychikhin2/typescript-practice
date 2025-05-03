@@ -325,6 +325,7 @@
 
 // // створимо функцію яка буде приймати масив будь якого типу
 // // додає до кожного елемента масива step та вертає оновлений масив
+
 // function arrPlusStep<N extends number[],S extends number>(arr: N,step: S): number[]{
 //     return arr.map(item => {
 //         return item + step
@@ -358,3 +359,214 @@
 //     login: "Name",
 //     password: 12345
 // }));
+
+// Написати функццію яка приймає два числа і додає їх(калькулятор)
+
+// const inputNumberOne = document.querySelector(".numberOne")! as HTMLInputElement;
+// const inputNumberTwo = document.querySelector(".numberTwo")! as HTMLInputElement;
+
+// const buttonElementSum = document.querySelector(".buttonSum")! as HTMLButtonElement;
+// const buttonElementDifference = document.querySelector(".buttonDifference")! as HTMLButtonElement;
+// const buttonElementMultiplier = document.querySelector(".buttonMultiplier")! as HTMLButtonElement;
+// const buttonElementDivision = document.querySelector(".buttonDivision")! as HTMLButtonElement;
+
+// function calculatorFunctionSum<N extends number, M extends number>(num1: N, num2: M): void {
+//     const sum: number = num1 + num2;
+//     console.log(sum);
+// };
+
+// function calculatorFunctionDifference<N extends number, M extends number>(num1: N, num2: M): void {
+//     const sum: number = num1 - num2;
+//     console.log(sum);
+// };
+
+// function calculatorFunctionMultiplier<N extends number, M extends number>(num1: N, num2: M): void {
+//     const sum: number = num1 * num2;
+//     console.log(sum);
+// };
+
+// function calculatorFunctionDivision<N extends number, M extends number>(num1: N, num2: M): void {
+//     const sum: number = num1 / num2;
+//     console.log(sum);
+// };
+
+// buttonElementSum.addEventListener("click", () => {
+//     calculatorFunctionSum(Number(inputNumberOne.value), Number(inputNumberTwo.value));
+// });
+// buttonElementDifference.addEventListener("click", () => {
+//     calculatorFunctionDifference(Number(inputNumberOne.value), Number(inputNumberTwo.value));
+// });
+// buttonElementMultiplier.addEventListener("click", () => {
+//     calculatorFunctionMultiplier(Number(inputNumberOne.value), Number(inputNumberTwo.value));
+// });
+// buttonElementDivision.addEventListener("click", () => {
+//     calculatorFunctionDivision(Number(inputNumberOne.value), Number(inputNumberTwo.value));
+// });
+
+// const inputForm = document.querySelector('.inputLogin')! as HTMLInputElement
+// const btnSubmit = document.querySelector(
+// 	'.buttonSubmitForm'
+// )! as HTMLButtonElement
+// const formSent = document.querySelector('.formLogin')! as HTMLFormElement
+
+// const logins: string[] = ['Stepan', '123123', 'qqwwpro']
+
+// formSent.addEventListener('submit', (e) => {
+// 	e.preventDefault()
+// 	// console.log(typeof inputForm.value)
+// 	// console.log(logins.find((elem) => elem === inputForm.value))
+// 	// logins.filter((elem) => elem === inputForm.value)
+// 	if (logins.find((elem) => elem === inputForm.value)) {
+// 		alert('логін знайдено')
+// 	} else {
+// 		alert('логін не знайдено')
+// 	}
+
+// 	// logins.map((data) => {
+
+// 	// //     if (inputForm.value === data) {
+// 	// //         alert("w")
+// 	// //     } else {
+// 	// //         alert("wawda")
+// 	// //     }
+// 	// //     console.log(data)
+// 	// })
+// })
+
+
+
+
+
+
+
+
+
+
+
+// // ? Напишіть функцію, яка отримує масив об'єктів і повертає масив імен з тих об'єктів,
+// // ? які мають вік більше 18 років.
+
+// const users: { firstName: string, lastName: string, age: number }[] = [
+//     {
+//         firstName: 'Semen',
+//         lastName: 'Antipyuk',
+//         age: 15
+//     }, {
+//         firstName: 'Michael',
+//         lastName: 'Ivanov',
+//         age: 15
+//     }, {
+//         firstName: 'Mykita',
+//         lastName: 'Pupkin',
+//         age: 20,
+//     }, {
+//         firstName: 'Ivan',
+//         lastName: 'Llalala',
+//         age: 22,
+//     }
+// ];
+// const ageFilter = (users: { firstName: string, lastName: string, age: number }[]) => {
+//     const filtredNamesUsers = users.filter(user => user.age >= 18).map(user => user.firstName);
+//     return filtredNamesUsers
+// }
+// console.log(ageFilter(users))
+
+
+
+// ? Напишіть функцію, яка отримує масив об'єктів і повертає масив імен з тих об'єктів,
+// ? які мають вік більше 18 років.
+
+// const users: { firstName: string, lastName: string, age: number }[] = [
+//     {
+//         firstName: 'Semen',
+//         lastName: 'Antipyuk',
+//         age: 15
+//     }, {
+//         firstName: 'Michael',
+//         lastName: 'Ivanov',
+//         age: 15
+//     }, {
+//         firstName: 'Mykita',
+//         lastName: 'Pupkin',
+//         age: 20,
+//     }, {
+//         firstName: 'Ivan',
+//         lastName: 'Llalala',
+//         age: 22,
+//     }
+// ];
+// const ageFilter = (users: { firstName: string, lastName: string, age: number }[]) => {
+//     const filtredNamesUsers = users.filter(user => user.age >= 18).map(user => user.firstName);
+//     return filtredNamesUsers
+// }
+// console.log(ageFilter(users))
+
+
+// type Human = {
+//     name: string,
+//     age: number
+// }
+
+// const mankind: Human[] = [
+//     { name: "John", age: 25 },
+//     { name: "Alice", age: 30 },
+//     { name: "Bob", age: 22 },
+//     { name: "Maria", age: 28 },
+//     { name: "David", age: 35 },
+//     { name: "Sophia", age: 16 },
+//     { name: "Michael", age: 40 },
+//     { name: "Emma", age: 15 },
+//     { name: "James", age: 14 },
+//     { name: "Olivia", age: 26 }
+// ];
+
+// const findAdults = (mankind: Human[]): string[] => mankind.filter((human: Human) => human.age >= 18).map((human: Human) => human.name);
+
+// console.log(findAdults(mankind));
+
+
+
+
+// const statsEl = document.querySelector('.stats') as HTMLDivElement;
+
+// type Tweet = {
+//     id: string,
+//     likes: number,
+//     tags: string[]
+// }
+
+// type Obj = {
+//     [key: string]: number
+// }
+
+// const tweets: Tweet[] = [
+//     { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//     { id: '001', likes: 2, tags: ['html', 'css'] },
+//     { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//     { id: '003', likes: 8, tags: ['css', 'react'] },
+//     { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// let stats: Obj = {};
+
+// tweets.forEach((tweet: Tweet) => {
+//     tweet.tags.forEach((tag: string) => {
+//         if (tag in stats) {
+//             stats[tag] = stats[tag]+1;
+//         } else {
+//             stats[tag] = 1;
+//         }
+//     })
+// });
+
+// console.log(stats);
+// Object.keys(stats).forEach((stat: string) => {
+//     statsEl.innerHTML += `${stat} - ${stats[stat]}<br>`
+// });
+
+
+
+// //скорочений варіант
+// tweets.forEach((tweet: Tweet) => tweet.tags.forEach((tag: string) => stats[tag] = tag in stats ? stats[tag]+1 : 1));
+
+// Object.keys(stats).forEach((stat: string) => statsEl.innerHTML += `${stat} - ${stats[stat]}<br>`);
